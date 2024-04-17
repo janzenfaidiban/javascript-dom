@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-900">
+
+<div>
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput">
+    <button id="submitButton">Submit</button>
+    <button id="resetButton">Reset</button>
+</div>
+
+<p id="result" class="bg-black/90 text-white/90 transition duration-500">Your name will appear here.</p>
+
+<script>
+    const button = document.querySelector('#submitButton');
+    const reset = document.querySelector('#resetButton');
+    const input = document.querySelector('#nameInput');
+    const result = document.querySelector('#result');
+
+    button.addEventListener('click', () => {
+        result.textContent = `Hello, ${input.value}!`;
+        result.className = 'bg-white/20 text-black/90';
+    });
+
+   /*
+    button.onclick = function() {
+        result.textContent = 'Hello, ' + input.value + '!';
+        result.className = 'bg-white/20 text-black/90';
+    };
+   */
+
+    reset.addEventListener('click', () => {
+        result.textContent = '';
+        result.className = 'bg-white/20 text-black/90';
+    });
+</script>
+
+</body>
+</html>

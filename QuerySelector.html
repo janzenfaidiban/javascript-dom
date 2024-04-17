@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Example</title>
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-900">
+
+<div>
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput">
+    <button id="submitButton">Submit</button>
+    <button id="resetButton">Reset</button>
+</div>
+
+<p id="result" class="bg-black/90 text-white/90 transition duration-500">Your name will appear here.</p>
+
+<script>
+    // Select the button and input elements
+    const button = document.querySelector('#submitButton');
+    const reset = document.querySelector('#resetButton');
+    const input = document.querySelector('#nameInput');
+    const result = document.querySelector('#result');
+
+    // Add a click event listener to the button
+    button.addEventListener('click', function() {
+        // Use the value from the input field and display it in the paragraph
+        result.textContent = 'Hello, ' + input.value + '!';
+        result.className = 'bg-white/20 text-black/90';
+    });
+
+    reset.addEventListener('click', function() {
+        // Use the value from the input field and display it in the paragraph
+        result.textContent = '';
+        result.className = 'bg-white/20 text-black/90';
+    });
+</script>
+
+</body>
+</html>
+
+
+<!-- 
+
+    // Mouse Events
+    button.addEventListener('click', function() { console.log('Mouse click event'); });
+    button.addEventListener('dblclick', function() { console.log('Mouse double click event'); });
+    button.addEventListener('mousedown', function() { console.log('Mouse button down event'); });
+    button.addEventListener('mouseup', function() { console.log('Mouse button up event'); });
+    button.addEventListener('mouseover', function() { console.log('Mouse over event'); });
+    button.addEventListener('mouseout', function() { console.log('Mouse out event'); });
+    button.addEventListener('mousemove', function() { console.log('Mouse move event'); });
+
+    // Keyboard Events
+    document.addEventListener('keydown', function() { console.log('Key down event'); });
+    document.addEventListener('keyup', function() { console.log('Key up event'); });
+    document.addEventListener('keypress', function() { console.log('Key press event'); });
+
+    // Form Events
+    input.addEventListener('focus', function() { console.log('Form focus event'); });
+    input.addEventListener('blur', function() { console.log('Form blur event'); });
+    input.addEventListener('change', function() { console.log('Form change event'); });
+    input.addEventListener('submit', function() { console.log('Form submit event'); });
+
+    // Window Events
+    window.addEventListener('resize', function() { console.log('Window resize event'); });
+    window.addEventListener('scroll', function() { console.log('Window scroll event'); });
+    window.addEventListener('load', function() { console.log('Window load event'); });
+    window.addEventListener('unload', function() { console.log('Window unload event'); });
+
+    // Touch Events
+    document.addEventListener('touchstart', function() { console.log('Touch start event'); });
+    document.addEventListener('touchmove', function() { console.log('Touch move event'); });
+    document.addEventListener('touchend', function() { console.log('Touch end event'); });
+
+    // Drag Events
+    document.addEventListener('drag', function() { console.log('Drag event'); });
+    document.addEventListener('dragstart', function() { console.log('Drag start event'); });
+    document.addEventListener('dragend', function() { console.log('Drag end event'); });
+    document.addEventListener('dragover', function() { console.log('Drag over event'); });
+    document.addEventListener('dragenter', function() { console.log('Drag enter event'); });
+    document.addEventListener('dragleave', function() { console.log('Drag leave event'); });
+    document.addEventListener('drop', function() { console.log('Drop event'); });
+
+    // Clipboard Events
+    document.addEventListener('copy', function() { console.log('Copy event'); });
+    document.addEventListener('cut', function() { console.log('Cut event'); });
+    document.addEventListener('paste', function() { console.log('Paste event'); });
+ -->
