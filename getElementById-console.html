@@ -12,47 +12,42 @@
     <h3>Properti yang ada di bawa elementById </h3>
     <div>
         <ul>
-            
+            <li>item : ...</li>
+            <li>className: ... </li>
+            <li>...: ... </li>
         </ul>
     </div>
     
 
 <script>
+    // Selecting an element by ID
     var elementById = document.getElementById('myElementId');
-    var properties = [
-        "id: " + elementById.id,
-        "className: " + elementById.className,
-        "innerHTML: " + elementById.innerHTML,
-        "outerHTML: " + elementById.outerHTML,
-        "textContent: " + elementById.textContent,
-        "nodeName: " + elementById.nodeName,
-        "nodeType: " + elementById.nodeType,
-        "children: " + elementById.children.length,
-        "childElementCount: " + elementById.childElementCount,
-        "attributes: " + elementById.attributes.length,
-        "style: " + elementById.style.cssText,
-        "offsetHeight: " + elementById.offsetHeight,
-        "offsetWidth: " + elementById.offsetWidth,
-        "offsetTop: " + elementById.offsetTop,
-        "offsetLeft: " + elementById.offsetLeft,
-        "scrollTop: " + elementById.scrollTop,
-        "scrollLeft: " + elementById.scrollLeft,
-        "scrollHeight: " + elementById.scrollHeight,
-        "scrollWidth: " + elementById.scrollWidth,
-        "clientHeight: " + elementById.clientHeight,
-        "clientWidth: " + elementById.clientWidth,
-        "clientTop: " + elementById.clientTop,
-        "clientLeft: " + elementById.clientLeft
-    ];
+    console.log(
+            ["id: " + elementById.id],
+            ["className: " + elementById.className],
+            ["innerHTML: " + elementById.innerHTML],
+            ["outerHTML: " + elementById.outerHTML],
+            ["textContent: " + elementById.textContent],
+            ["nodeName: " + elementById.nodeName],
+            ["nodeType: " + elementById.nodeType],
+            ["children: " + elementById.children.length],
+            ["childElementCount: " + elementById.childElementCount],
+            ["attributes: " + elementById.attributes.length],
+            ["style: " + elementById.style.cssText],
+            ["offsetHeight: " + elementById.offsetHeight],
+            ["offsetWidth: " + elementById.offsetWidth],
+            ["offsetTop: " + elementById.offsetTop],
+            ["offsetLeft: " + elementById.offsetLeft],
+            ["scrollTop: " + elementById.scrollTop],
+            ["scrollLeft: " + elementById.scrollLeft],
+            ["scrollHeight: " + elementById.scrollHeight],
+            ["scrollWidth: " + elementById.scrollWidth],
+            ["clientHeight: " + elementById.clientHeight],
+            ["clientWidth: " + elementById.clientWidth],
+            ["clientTop: " + elementById.clientTop],
+            ["clientLeft: " + elementById.clientLeft]
+        );
 
-    var ul = document.createElement('ul');
-    properties.forEach(function(property) {
-        var li = document.createElement('li');
-        li.textContent = property;
-        ul.appendChild(li);
-    });
-
-    document.body.appendChild(ul);
 </script>
     
 </body>
